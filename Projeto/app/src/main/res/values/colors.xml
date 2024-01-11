@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ciano">#05BDC3</color>
+    <color name="AzulC">#03A9F4</color>
+    <color name="bt_roxo">#731782</color>
+</resources>
