@@ -1,4 +1,4 @@
-package devandroid.lucas.appgaseta;
+package devandroid.lucas.appgaseta.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,8 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import devandroid.lucas.appgaseta.View.GasEtaActivity;
-import devandroid.lucas.appgaseta.View.MainActivity;
+import devandroid.lucas.appgaseta.R;
 import devandroid.lucas.appgaseta.database.GaseEtaDB;
 
 public class SplashActivity extends AppCompatActivity {

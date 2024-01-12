@@ -96,7 +96,7 @@ public class GasEtaActivity extends AppCompatActivity {
                 combustivelGasolina.setPrecoDoCombustivel(Double.parseDouble(editGasolina.getText().toString()));
 
                 combustivelEtanol.setNomeDoCombustível("Etanol");
-                combustivelGasolina.setPrecoDoCombustivel(Double.parseDouble(editGasolina.getText().toString()));
+                combustivelEtanol.setPrecoDoCombustivel(Double.parseDouble(editEtanol.getText().toString()));
 
                 combustivelGasolina.setRecomendacao(UtilGasEta.calcularMelhorOpcao(
                         Double.parseDouble(editGasolina.getText().toString()),
@@ -110,6 +110,8 @@ public class GasEtaActivity extends AppCompatActivity {
 
                 combustivelController.salvar(combustivelGasolina);
                 combustivelController.salvar(combustivelEtanol);
+
+
 
             }
         });
