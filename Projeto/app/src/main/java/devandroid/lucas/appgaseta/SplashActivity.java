@@ -8,6 +8,7 @@ import android.os.Handler;
 
 import devandroid.lucas.appgaseta.View.GasEtaActivity;
 import devandroid.lucas.appgaseta.View.MainActivity;
+import devandroid.lucas.appgaseta.database.GaseEtaDB;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -27,6 +28,8 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() /*Defini apôs quantos segundos irá iniciar*/{
             @Override
             public void run() /*O que ira fazer no processamento*/{
+
+                GaseEtaDB db = new GaseEtaDB(SplashActivity.this);
 
                 Intent/*Serve par mudar de tela*/ telaPrincipal =
                    new Intent(SplashActivity.this/*Aonde você está*/, GasEtaActivity.class/*Aonde vai*/);

@@ -15,9 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import devandroid.lucas.appgaseta.Model.Combustivel;
 import devandroid.lucas.appgaseta.R;
 import devandroid.lucas.appgaseta.apoio.UtilGasEta;
+import devandroid.lucas.appgaseta.controller.CombustivelController;
 
 public class GasEtaActivity extends AppCompatActivity {
 
+    CombustivelController combustivelController;
     Combustivel combustivelGasolina;
     Combustivel combustivelEtanol;
 
@@ -85,6 +87,7 @@ public class GasEtaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                combustivelController = new CombustivelController(GasEtaActivity.this);
 
                 combustivelGasolina = new Combustivel();
                 combustivelEtanol = new Combustivel();
@@ -105,7 +108,9 @@ public class GasEtaActivity extends AppCompatActivity {
                         Double.parseDouble(editEtanol.getText().toString())
                 ));
 
-                int parada = 0;
+                combustivelController.salvar(combustivelGasolina);
+                combustivelController.salvar(combustivelEtanol);
+
             }
         });
 
@@ -123,11 +128,14 @@ public class GasEtaActivity extends AppCompatActivity {
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 editEtanol.setText(null);
                 editGasolina.setText(null);
                 txtResultado.setText("RESULTADO");
 
                 btnSalvar.setEnabled(false);
+
+                combustivelController.limpar();
             }
         });
     }
