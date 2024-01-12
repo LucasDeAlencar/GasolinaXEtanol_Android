@@ -2,9 +2,19 @@ package devandroid.lucas.appgaseta.Model;
 
 public class Combustivel {
 
+    private int id;
     private String nomeDoCombustível;
     private double precoDoCombustivel;
     private String recomendacao;
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNomeDoCombustível() {
         return nomeDoCombustível;

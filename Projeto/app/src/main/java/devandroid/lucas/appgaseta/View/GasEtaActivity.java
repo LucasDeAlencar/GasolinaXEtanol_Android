@@ -12,6 +12,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
+
 import devandroid.lucas.appgaseta.Model.Combustivel;
 import devandroid.lucas.appgaseta.R;
 import devandroid.lucas.appgaseta.apoio.UtilGasEta;
@@ -31,6 +33,8 @@ public class GasEtaActivity extends AppCompatActivity {
     Button btnFinalizar;
     Button btnSalvar;
 
+    List<Combustivel> dados;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +51,18 @@ public class GasEtaActivity extends AppCompatActivity {
         editEtanol = findViewById(R.id.editEtanol);
         editGasolina = findViewById(R.id.editGasolina);
         txtResultado = findViewById(R.id.txtResultado);
+
+        combustivelController = new CombustivelController(GasEtaActivity.this);
+        dados = combustivelController.getListaDeDados();
+
+//        Combustivel objAlteracao = dados.get(1);
+//        objAlteracao.setNomeDoCombustível("**GASOLINA**");
+//        objAlteracao.setPrecoDoCombustivel(5.97);
+//        objAlteracao.setRecomendacao("**Abastecer com Gasolina");
+//
+//        combustivelController.alterar(objAlteracao);
+
+        combustivelController.deletar(2);/*Deleção*/
 
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override

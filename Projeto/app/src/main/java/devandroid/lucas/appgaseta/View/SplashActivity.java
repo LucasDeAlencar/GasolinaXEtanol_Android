@@ -11,7 +11,7 @@ import devandroid.lucas.appgaseta.database.GaseEtaDB;
 
 public class SplashActivity extends AppCompatActivity {
 
-    public static final int TIME_OUT_SPLASH = 3000;/*Variavel guardara o tempo que ira iniciar (3s)*/
+    public static final int TIME_OUT_SPLASH = 1500;/*Variavel guardara o tempo que ira iniciar (3s)*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
